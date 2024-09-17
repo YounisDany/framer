@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>إضافة إطار للصورة</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>اختر إطاراً وارفع صورتك</h1>
+        <div class="frame-gallery">
+            <img src="frame1.png" alt="إطار 1" class="frame-thumbnail" onclick="selectFrame('frame1.png')">
+            <img src="frame2.png" alt="إطار 2" class="frame-thumbnail" onclick="selectFrame('frame2.png')">
+            <img src="frame3.png" alt="إطار 3" class="frame-thumbnail" onclick="selectFrame('frame3.png')">
+        </div>
+        <input type="file" id="imageInput" accept="image/*">
+        <button onclick="applyFrame()">تطبيق الإطار</button>
+        <canvas id="canvas"></canvas>
+        <a id="downloadLink" download="الصورة_مع_الإطار.png">تحميل الصورة</a>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
