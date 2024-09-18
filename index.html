@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>إضافة إطار للصورة</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -14,11 +15,15 @@
             <img src="frame2.png" alt="إطار 2" class="frame-thumbnail" onclick="selectFrame('frame2.png')">
             <img src="frame3.png" alt="إطار 3" class="frame-thumbnail" onclick="selectFrame('frame3.png')">
         </div>
-        <input type="file" id="imageInput" accept="image/*">
+        <input type="file" id="imageInput" accept="image/*" onchange="loadImage(event)">
+        <div class="crop-container">
+            <img id="imageToCrop" style="max-width: 100%;">
+        </div>
         <button onclick="applyFrame()">تطبيق الإطار</button>
-        <canvas id="canvas" class="blurred-edges"></canvas>
+        <canvas id="canvas"></canvas>
         <a id="downloadLink" download="الصورة_مع_الإطار.png">تحميل الصورة</a>
     </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
     <script src="script.js"></script>
 </body>
 </html>
