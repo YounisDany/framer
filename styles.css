@@ -66,6 +66,10 @@ input[type="file"] {
     margin-bottom: 15px;
 }
 
+.crop-container {
+    margin-bottom: 20px;
+}
+
 button {
     background-color: #007bff;
     color: white;
@@ -87,11 +91,6 @@ canvas {
     border: 2px solid #ddd;
     border-radius: 8px;
     max-width: 100%;
-    filter: blur(8px);
-}
-
-.blurred-edges {
-    filter: blur(8px);
 }
 
 a {
