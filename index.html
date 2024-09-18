@@ -19,6 +19,13 @@
         <div class="crop-container">
             <img id="imageToCrop" style="max-width: 100%;">
         </div>
+        <div class="controls">
+            <button onclick="cropper.zoom(0.1)">تكبير</button>
+            <button onclick="cropper.zoom(-0.1)">تصغير</button>
+            <button onclick="cropper.rotate(10)">تدوير يمين</button>
+            <button onclick="cropper.rotate(-10)">تدوير يسار</button>
+            <button onclick="cropper.reset()">إعادة تعيين</button>
+        </div>
         <button onclick="applyFrame()">تطبيق الإطار</button>
         <div class="preview-container">
             <h2>المعاينة الحية:</h2>
