@@ -1,4 +1,3 @@
-
 // script.js
 
 let selectedFrame = '';
@@ -28,10 +27,14 @@ function applyFrame() {
     reader.onload = function (event) {
         const userImage = new Image();
         userImage.onload = function () {
-            canvas.width = userImage.width;
-            canvas.height = userImage.height;
+            const scaleFactor = Math.min(canvas.width / userImage.width, canvas.height / userImage.height);
+            const x = (canvas.width - userImage.width * scaleFactor) / 2;
+            const y = (canvas.height - userImage.height * scaleFactor) / 2;
 
-            ctx.drawImage(userImage, 0, 0);
+            canvas.width = frameImage.width;
+            canvas.height = frameImage.height;
+
+            ctx.drawImage(userImage, x, y, userImage.width * scaleFactor, userImage.height * scaleFactor);
             ctx.drawImage(frameImage, 0, 0, canvas.width, canvas.height);
 
             downloadLink.href = canvas.toDataURL();
