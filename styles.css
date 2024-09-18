@@ -35,7 +35,7 @@ body {
     100% { transform: scale(1); opacity: 1; }
 }
 
-h1 {
+h1, h2 {
     margin-bottom: 20px;
     font-size: 24px;
     color: #444;
@@ -66,8 +66,19 @@ input[type="file"] {
     margin-bottom: 15px;
 }
 
-.crop-container {
+.crop-container, .preview-container {
     margin-bottom: 20px;
+}
+
+.preview-frame {
+    border: 2px solid #ddd;
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+}
+
+canvas {
+    max-width: 100%;
 }
 
 button {
@@ -84,13 +95,6 @@ button {
 button:hover {
     background-color: #0056b3;
     transform: translateY(-2px);
-}
-
-canvas {
-    margin-top: 20px;
-    border: 2px solid #ddd;
-    border-radius: 8px;
-    max-width: 100%;
 }
 
 a {
