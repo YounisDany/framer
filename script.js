@@ -9,7 +9,6 @@ function selectFrame(frame) {
     thumbnails.forEach(img => img.style.borderColor = 'transparent');
     document.querySelector(`img[src="${frame}"]`).style.borderColor = '#007bff';
 
-    // تحديث المعاينة الحية عند اختيار الإطار
     updateLivePreview();
 }
 
@@ -22,9 +21,14 @@ function loadImage(event) {
     }
 
     cropper = new Cropper(imageToCrop, {
-        aspectRatio: 1,
         viewMode: 1,
+        dragMode: 'move',
         autoCropArea: 1,
+        cropBoxResizable: true,
+        cropBoxMovable: true,
+        zoomable: true,
+        scalable: true,
+        rotatable: true,
         crop: function() {
             updateLivePreview(); // تحديث المعاينة الحية عند تحرير الصورة
         }
