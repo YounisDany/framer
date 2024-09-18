@@ -20,7 +20,12 @@
             <img id="imageToCrop" style="max-width: 100%;">
         </div>
         <button onclick="applyFrame()">تطبيق الإطار</button>
-        <canvas id="canvas"></canvas>
+        <div class="preview-container">
+            <h2>المعاينة الحية:</h2>
+            <div class="preview-frame">
+                <canvas id="previewCanvas"></canvas>
+            </div>
+        </div>
         <a id="downloadLink" download="الصورة_مع_الإطار.png">تحميل الصورة</a>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
